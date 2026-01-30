@@ -20,4 +20,4 @@ servindo também como demonstração de habilidades em front-end e integração
 com métricas.
 
 ## 🌐 Acesse o projeto
-👉 (coloque aqui o link do GitHub Pages quando ativar)
+👉 https://freitas-t.github.io/mural-pets/
