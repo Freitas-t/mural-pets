@@ -1,0 +1,494 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mural de Pets</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K5CLWCVJCB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-K5CLWCVJCB');
+</script>
+<style>
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    background: #ffcd00;
+    background-image: url("assets/icons/patinha.png");
+    background-repeat: repeat;
+    background-size: 80px;
+    background-position: 20px 30px;
+    margin: 0;
+    padding: 20px;
+}
+
+.mural {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pet-card {
+    background: #1c4482;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.pet-card h2 {
+    margin: 0;
+    margin-bottom: 6px;
+    font-size: 20px;
+    color: #f5f2d0
+}
+
+.pet-card p {
+    margin: 6px 0 14px 0;
+    color: white;
+}
+
+.fotos {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.fotos img {
+    height: 180px;
+    width: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.topo {
+    position: relative;
+    height: 100px;
+    margin-bottom: 40px;
+    z-index: 1;
+}
+
+img.logo {
+    position: absolute;
+    top: 0;
+    height: 80px;
+    width: auto;
+}
+
+img.logo.esquerda {
+    left: 0;
+}
+
+img.logo.direita {
+    right: 0;
+}
+
+.instrucao {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+    opacity: 0,85;
+    color: red;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow:0 0 30px rgba(0,0,0,0.6);
+}
+
+.fotos img {
+    cursor: zoom-in;
+}
+
+footer{
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 10px;
+    font-size: 21px;
+    color: black;
+    opacity; 0,8;
+}
+
+</style>
+</head>
+<body>
+<div class="topo">
+    <img class="logo esquerda" src="assets/logos/logo_direito/logo-direito.jpeg">
+    <img class="logo direita" src="assets/logos/logo_esquerdo/logo-esquerdo.jpeg">
+</div>
+
+
+<h1>Mural de Pets 🐾</h1>
+<p class="instrucao">Para ver maior, basta clicar na foto!</p>
+
+<div class="mural">
+
+    <div class="pet-card">
+        <h2>Igor Machado</h2>
+        <p>Nome: Cacau Caroline
+Idade: 8 meses
+</p>
+        <div class="fotos">
+    <img src="images/1-1.jpeg" onclick="abrirLightbox(this.src)"><img src="images/1-2.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Fernando Henrique Paixão</h2>
+        <p>Thor 9 anos</p>
+        <div class="fotos">
+    <img src="images/2-1.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Ricardo Costa dos Anjos</h2>
+        <p>Zoe - 6 meses</p>
+        <div class="fotos">
+    <img src="images/3-1.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Isabella Enohi</h2>
+        <p>Gohan, 3 anos PET 1
+Sushi, 2 anos PET 2</p>
+        <div class="fotos">
+    <img src="images/4-1.jpeg" onclick="abrirLightbox(this.src)"><img src="images/4-2.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Luciana Rodrigues de Oliveira</h2>
+        <p>Tooty 16 anos PET 1
+Thor  3 anos PET 2</p>
+        <div class="fotos">
+    <img src="images/5-1.jpeg" onclick="abrirLightbox(this.src)"><img src="images/5-2.jpeg" onclick="abrirLightbox(this.src)"><img src="images/5-3.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Wagner Braz Oliveira</h2>
+        <p>Caramelo - (Leão da Montanha), idade 2 anos</p>
+        <div class="fotos">
+    <img src="images/6-1.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Karina Barrella Teixeira</h2>
+        <p>Hanna 6 anos PET1
+Simba 4 anos PET2
+Wandinha 3 anos PET3
+Juninho 3 anos PET4</p>
+        <div class="fotos">
+    <img src="images/7-1.jpeg" onclick="abrirLightbox(this.src)"><img src="images/7-2.jpeg" onclick="abrirLightbox(this.src)"><img src="images/7-3.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Samara Costa</h2>
+        <p>Luna 2 anos PET 1, Safira 9 anos PET 2.</p>
+        <div class="fotos">
+    <img src="images/8-1.jpeg" onclick="abrirLightbox(this.src)"><img src="images/8-2.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Karina</h2>
+        <p>Amora 10 anos PET 1
+BB8 8 anos PET 2
+Penélope 7 anos PET 3
+Kalisee 6 anos PET 4
+Snarff 3 anos PET 5
+Shuri 2 anos PET 6
+Snarfinho 1 ano PET 7</p>
+        <div class="fotos">
+    <img src="images/9-1.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>BRUNA GARCIA DA SILVA</h2>
+        <p>ONA  2 anos</p>
+        <div class="fotos">
+    <img src="images/10-1.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Everton Saramela</h2>
+        <p>Eros - 11 meses</p>
+        <div class="fotos">
+    <img src="images/11-1.jpeg" onclick="abrirLightbox(this.src)"><img src="images/11-2.jpeg" onclick="abrirLightbox(this.src)"><img src="images/11-3.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Giovanna Silva Mendes de Oliveira </h2>
+        <p>Zeus ( 3 Anos)</p>
+        <div class="fotos">
+    <img src="images/12-1.jpeg" onclick="abrirLightbox(this.src)"><img src="images/12-2.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Emily Medeiros</h2>
+        <p>Simas 7 anos (gato branco)
+Mia 6 anos 
+Roberto 4 anos (porquinho da índia)
+</p>
+        <div class="fotos">
+    <img src="images/13-1.jpeg" onclick="abrirLightbox(this.src)"><img src="images/13-2.jpeg" onclick="abrirLightbox(this.src)"><img src="images/13-3.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Raul Sperandio</h2>
+        <p>Hector, 8 anos | Petit, 4 anos | Mel, 3 anos</p>
+        <div class="fotos">
+    <img src="images/14-1.jpeg" onclick="abrirLightbox(this.src)"><img src="images/14-2.jpeg" onclick="abrirLightbox(this.src)"><img src="images/14-3.jpeg" onclick="abrirLightbox(this.src)"><img src="images/14-4.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Geovanna Oliveira </h2>
+        <p>Yumi </p>
+        <div class="fotos">
+    <img src="images/15-1.jpeg" onclick="abrirLightbox(this.src)"><img src="images/15-2.jpeg" onclick="abrirLightbox(this.src)"><img src="images/15-3.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>ROBERTA DE OLIVEIRA BEZERRA</h2>
+        <p>PET 1 GATA: HOPE, 7 ANOS (COR PRETA E BRANCA) | PET 2 BLESS 9 ANOS, (COR LARANJA) | PET 3 GATA: AMY WINEHOUSE, 9 ANOS (PRATA COM LARANJA | GATO: OZZY OSBOURNE 9 ANOS (BRANCO)</p>
+        <div class="fotos">
+    <img src="images/16-1.jpeg" onclick="abrirLightbox(this.src)"><img src="images/16-2.jpeg" onclick="abrirLightbox(this.src)"><img src="images/16-3.jpeg" onclick="abrirLightbox(this.src)"><img src="images/16-4.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Renata Colamarche</h2>
+        <p>Juma 11 meses PET 1
+Rudá 04 meses PET 2</p>
+        <div class="fotos">
+    <img src="images/17-1.jpeg" onclick="abrirLightbox(this.src)"><img src="images/17-2.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Caio Vinícius </h2>
+        <p>Luke 
+4 anos </p>
+        <div class="fotos">
+    <img src="images/18-1.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>André Neiva</h2>
+        <p>Belle - 10 meses</p>
+        <div class="fotos">
+    <img src="images/19-1.jpeg" onclick="abrirLightbox(this.src)"><img src="images/19-2.jpeg" onclick="abrirLightbox(this.src)"><img src="images/19-3.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Bruna Mariano</h2>
+        <p>Perola - 11 anos</p>
+        <div class="fotos">
+    <img src="images/20-1.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Kátia Focante</h2>
+        <p>Gaia - 4 anos
+Charlotte - 8 anos
+Zoe - 4 anos
+Docinho - 17 anos
+Frajola - 3 anos</p>
+        <div class="fotos">
+    <img src="images/21-1.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Geovanna Novais</h2>
+        <p>Nome: Odin
+Idade: 5 anos</p>
+        <div class="fotos">
+    <img src="images/22-1.jpeg" onclick="abrirLightbox(this.src)"><img src="images/22-2.jpeg" onclick="abrirLightbox(this.src)"><img src="images/22-3.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Jessica Sousa Brandão Padovani</h2>
+        <p>Tiffany 9 anos pet 1 (caramelo)
+Lonarda 8 meses pet 2 (foto junto com loirinha)
+Loirinha 8 meses pet 3 (loira rsrs)
+Lucy 8 meses pet 4 (pretinha) </p>
+        <div class="fotos">
+    <img src="images/23-1.jpeg" onclick="abrirLightbox(this.src)"><img src="images/23-2.jpeg" onclick="abrirLightbox(this.src)"><img src="images/23-3.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Isabele Passos Duvaresch</h2>
+        <p>Bob 5 anos (Gato) - pet 1
+Pandora 1 ano 2 meses (Gata) - pet 2
+Tody 4 anos (cachorro) - pet 3</p>
+        <div class="fotos">
+    <img src="images/24-1.jpeg" onclick="abrirLightbox(this.src)"><img src="images/24-2.jpeg" onclick="abrirLightbox(this.src)"><img src="images/24-3.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Manoel </h2>
+        <p>Bartho 3 anos </p>
+        <div class="fotos">
+    <img src="images/25-1.jpeg" onclick="abrirLightbox(this.src)"><img src="images/25-2.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Raquel Lopes Gimenes </h2>
+        <p>Meg 6 anos PET 1 | Bob 5 anos PET 2</p>
+        <div class="fotos">
+    <img src="images/26-1.jpeg" onclick="abrirLightbox(this.src)"><img src="images/26-2.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Julia Luchetti da Silva</h2>
+        <p>Nome: Filho Idade: 5 anos</p>
+        <div class="fotos">
+    <img src="images/27-1.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Arthur Araújo Bezerra Lima </h2>
+        <p>Josias 9 anos | Cherry 4 anos</p>
+        <div class="fotos">
+    <img src="images/28-1.jpeg" onclick="abrirLightbox(this.src)"><img src="images/28-2.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Amarilis Brito Monteiro</h2>
+        <p>Mel, ela tem 1 ano</p>
+        <div class="fotos">
+    <img src="images/29-1.jpeg" onclick="abrirLightbox(this.src)"><img src="images/29-2.jpeg" onclick="abrirLightbox(this.src)"><img src="images/29-3.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Isabella Severiano Costa</h2>
+        <p>John Lennon - 11 anos</p>
+        <div class="fotos">
+    <img src="images/30-1.jpeg" onclick="abrirLightbox(this.src)"><img src="images/30-2.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Marcela Freitas</h2>
+        <p>Mike, 13 anos PET1 | Gibbs, 6 anos PET2</p>
+        <div class="fotos">
+    <img src="images/31-1.jpeg" onclick="abrirLightbox(this.src)"><img src="images/31-2.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Andreia Zambonini </h2>
+        <p>Zion Zambonini,  1 ano e 2 meses </p>
+        <div class="fotos">
+    <img src="images/32-1.jpeg" onclick="abrirLightbox(this.src)"><img src="images/32-2.jpeg" onclick="abrirLightbox(this.src)"><img src="images/32-3.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Henrique Cosntantino Germano</h2>
+        <p>Nome:  Lina Westofthemoon Germano
+Idade: 2 anos 8 meses</p>
+        <div class="fotos">
+    <img src="images/33-1.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Selênia Rocha Jiménez </h2>
+        <p>Dorotéia 10 anos</p>
+        <div class="fotos">
+    <img src="images/34-1.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>BRUNA EVELINE DE SOUZA OLIVEIRA</h2>
+        <p>Cachorra - Fiona - 10 meses 
+Gato Preto e Branco - Ravi Antônio - 3 anos
+Gata Marrom e Branco - Isabel Cristina - 5 anos
+Peixe  Azul - Azul
+Peixe Branco - Cinzinha</p>
+        <div class="fotos">
+    <img src="images/35-1.jpeg" onclick="abrirLightbox(this.src)"><img src="images/35-2.jpeg" onclick="abrirLightbox(this.src)"><img src="images/35-3.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+    <div class="pet-card">
+        <h2>Fernanda Jurado</h2>
+        <p>Bella labrador 14 anos
+Mel vira lata 15 anos 
+Baby cokcer 10 anos</p>
+        <div class="fotos">
+    <img src="images/36-1.jpeg" onclick="abrirLightbox(this.src)"><img src="images/36-2.jpeg" onclick="abrirLightbox(this.src)"><img src="images/36-3.jpeg" onclick="abrirLightbox(this.src)">
+        </div>
+    </div>
+    
+</div>
+<footer>
+    <p>DHOemAção fazendo uma SBCD de pessoas para pessoas.</p>
+</footer>
+<div class="lightbox" id="lightbox" onclick="fecharLightbox()">
+    <img id="lightbox-img">
+</div>
+<script>
+function abrirLightbox(src) {
+    const lb = document.getElementById("lightbox");
+    const img = document.getElementById("lightbox-img");
+    img.src = src;
+    lb.style.display = "flex";
+}
+
+function fecharLightbox(){
+    document.getElementById("lightbox").style.display = "none";
+}
+
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+});
+</script>
+</body>
+</html>
